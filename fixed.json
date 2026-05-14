@@ -4,7 +4,7 @@
     "version": "v1",
     "title": "Logo Objects Rest Service v1",
     "description": "<b>Parametre Tanımları</b>\r\n                                                <br><b>expandLevel</b> - Alt nesneler ile birlikte dön. (Tek kullanım bulunuyor tüm alt nesneleri getirir, expandLevel=full)\r\n                                                <br><b>expand</b> - Getirilecek alt nesne isimleri (expandLevel parametresi full verilerek, expand=TRANSACTIONS gibi , ile ek alanlar eklenebilir)\r\n                                                <br><b>fields</b> - Filtrelenecek alanlar (fields=CODE,NAME gibi)\r\n                                                <br><b>withCount</b> - Toplam kayıt sayısınıda dön (withCount=true)\r\n                                                <br><b>count</b> - Kayıt sayısını dön (count=true)\r\n                                                <br><b>first</b> - İlk Kayıtı dön (first=true)\r\n                                                <br><b>last</b> - Son Kaydı dön (last=true)\r\n                                                <br><b>limit</b> - Getirilecek kayıt sayısı (limit=10 gibi, verilmez ise varsayılan limit degerine göre çalışır, ana nesne sorgularında (purchaseInvoices, glaccounts vb) limit maks. 25 (varsayılan) olarak sınırlanmıştır)\r\n                                                <br><b>offset</b> - Kayıt başlangıç indeksi (offset=10 gibi)\r\n                                                <br><b>q</b> - Arama kriterleri (eq,gtq,gt,lte,lt,neq,like operatorleri kullanılarak birden fazla kriter and ve or operatorleri ile birlikte kullanılabilir. Tarih için 'dd.mm.yyy' formatı ondalıklı sayılar için 10.5 gibi nokta ayıracı kullanılmalıdır, parantez kullanılabilir)\r\n                                                <br>Ör1: /salesorders?q=DATE eq '04.11.2016' and INTERNAL_REFERENCE eq 1 and ORDER_STATUS lt 2 and TOTAL_VAT gt 8 and DEPARTMENT lte 0 and TOTAL_VAT gte 8.5 and INTERNAL_REFERENCE like '1*' and INTERNAL_REFERENCE neq 2\r\n                                                <br>Ör2: /glaccounts?q=CODE gte '100' and CODE lt '200' AND (DESCRIPTION like 'Kasa*' or DESCRIPTION like '*Çek*')\r\n                                                <br>Ör3: /salesorders/1/transactions?q=(MASTER_CODE like 'MAL*' or MASTER_CODE like '*ME.*') and TYPE eq 0 and PRICE gte 10 and TOTAL lte 50 and TOTAL gte 50 \r\n                                                <br><b>sort</b> - Sıralama (sort=CODE,TITLE desc gibi)\r\n                                                <br><b>tsql</b> - Sorgu cümlesi (SQL) (tsql=SQL sorgusu)\r\n                                                <br><b>api_key</b> - Dökümantasyon için api_key bilgisi (api_key=apiKey gibi)\r\n                                                <br><b>Authorization</b> - Access Token (Bearer [access token])",
-    "vendorExtensions": {}
+    
   },
   "host": "logodemoserver.logo.com.tr:32001",
   "basePath": "/api/v1",
@@ -30,7 +30,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -38,7 +38,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -46,7 +46,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -55,7 +55,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -72,9 +72,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/ArpGroupAssignments": {
       "get": {
@@ -94,7 +94,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -102,7 +102,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -110,7 +110,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -119,7 +119,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -136,9 +136,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/ArpMLDescriptons": {
       "get": {
@@ -158,7 +158,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -166,7 +166,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -174,7 +174,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -183,7 +183,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -200,9 +200,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/Arps": {
       "get": {
@@ -222,7 +222,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -230,7 +230,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -238,7 +238,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -247,7 +247,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -264,9 +264,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/ArpShipmentLocations": {
       "get": {
@@ -286,7 +286,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -294,7 +294,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -302,7 +302,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -311,7 +311,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -328,9 +328,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/ArpSlips": {
       "get": {
@@ -350,7 +350,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -358,7 +358,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -366,7 +366,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -375,7 +375,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -392,9 +392,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/authorizationCodes": {
       "get": {
@@ -414,7 +414,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -422,7 +422,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -430,7 +430,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -439,7 +439,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -456,9 +456,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/bankAccounts": {
       "get": {
@@ -478,7 +478,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -486,7 +486,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -494,7 +494,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -503,7 +503,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -520,9 +520,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/bankCredits": {
       "get": {
@@ -542,7 +542,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -550,7 +550,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -558,7 +558,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -567,7 +567,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -584,9 +584,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/bankMLDescriptions": {
       "get": {
@@ -606,7 +606,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -614,7 +614,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -622,7 +622,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -631,7 +631,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -648,9 +648,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/banks": {
       "get": {
@@ -670,7 +670,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -678,7 +678,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -686,7 +686,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -695,7 +695,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -712,9 +712,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/bankSlips": {
       "get": {
@@ -734,7 +734,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -742,7 +742,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -750,7 +750,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -759,7 +759,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -776,9 +776,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/Boms": {
       "get": {
@@ -798,7 +798,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -806,7 +806,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -814,7 +814,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -823,7 +823,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -840,9 +840,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/BomStandardCosts": {
       "get": {
@@ -862,7 +862,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -870,7 +870,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -878,7 +878,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -887,7 +887,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -904,9 +904,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/characteristics": {
       "get": {
@@ -926,7 +926,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -934,7 +934,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -942,7 +942,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -951,7 +951,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -968,9 +968,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/characteristicSets": {
       "get": {
@@ -990,7 +990,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -998,7 +998,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1006,7 +1006,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1015,7 +1015,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1032,9 +1032,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/chequeAndPnoteRolls": {
       "get": {
@@ -1054,7 +1054,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1062,7 +1062,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1070,7 +1070,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1079,7 +1079,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1096,9 +1096,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/chequeAndPnotes": {
       "get": {
@@ -1118,7 +1118,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1126,7 +1126,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1134,7 +1134,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1143,7 +1143,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1160,9 +1160,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/cities": {
       "get": {
@@ -1182,7 +1182,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1190,7 +1190,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1198,7 +1198,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1207,7 +1207,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1224,9 +1224,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/collateralRolls": {
       "get": {
@@ -1246,7 +1246,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1254,7 +1254,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1262,7 +1262,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1271,7 +1271,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1288,9 +1288,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/contacts": {
       "get": {
@@ -1310,7 +1310,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1318,7 +1318,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1326,7 +1326,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1335,7 +1335,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1352,9 +1352,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/costDistributionSlips": {
       "get": {
@@ -1374,7 +1374,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1382,7 +1382,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1390,7 +1390,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1399,7 +1399,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1416,9 +1416,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/countries": {
       "get": {
@@ -1438,7 +1438,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1446,7 +1446,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1454,7 +1454,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1463,7 +1463,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1480,9 +1480,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/customerMLDescriptions": {
       "get": {
@@ -1502,7 +1502,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1510,7 +1510,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1518,7 +1518,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1527,7 +1527,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1544,9 +1544,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/customers": {
       "get": {
@@ -1566,7 +1566,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1574,7 +1574,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1582,7 +1582,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1591,7 +1591,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1608,9 +1608,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/customersOfSalesmen": {
       "get": {
@@ -1630,7 +1630,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1638,7 +1638,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1646,7 +1646,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1655,7 +1655,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1672,9 +1672,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/customsOffices": {
       "get": {
@@ -1694,7 +1694,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1702,7 +1702,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1710,7 +1710,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1719,7 +1719,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1736,9 +1736,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/deliveryCodes": {
       "get": {
@@ -1758,7 +1758,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1766,7 +1766,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1774,7 +1774,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1783,7 +1783,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1800,9 +1800,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/demandPeggings": {
       "get": {
@@ -1822,7 +1822,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1830,7 +1830,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1838,7 +1838,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1847,7 +1847,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1864,9 +1864,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/demandSlips": {
       "get": {
@@ -1886,7 +1886,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1894,7 +1894,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1902,7 +1902,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1911,7 +1911,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1928,9 +1928,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/distributionOrders": {
       "get": {
@@ -1950,7 +1950,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1958,7 +1958,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -1966,7 +1966,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -1975,7 +1975,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -1992,9 +1992,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/distributionRoutes": {
       "get": {
@@ -2014,7 +2014,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2022,7 +2022,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2030,7 +2030,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2039,7 +2039,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2056,9 +2056,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/distributionTemplates": {
       "get": {
@@ -2078,7 +2078,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2086,7 +2086,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2094,7 +2094,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2103,7 +2103,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2120,9 +2120,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/districts": {
       "get": {
@@ -2142,7 +2142,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2150,7 +2150,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2158,7 +2158,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2167,7 +2167,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2184,9 +2184,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/employeeCosts": {
       "get": {
@@ -2206,7 +2206,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2214,7 +2214,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2222,7 +2222,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2231,7 +2231,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2248,9 +2248,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/employeeGroups": {
       "get": {
@@ -2270,7 +2270,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2278,7 +2278,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2286,7 +2286,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2295,7 +2295,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2312,9 +2312,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/employees": {
       "get": {
@@ -2334,7 +2334,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2342,7 +2342,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2350,7 +2350,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2359,7 +2359,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2376,9 +2376,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/employeeStandardCosts": {
       "get": {
@@ -2398,7 +2398,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2406,7 +2406,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2414,7 +2414,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2423,7 +2423,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2440,9 +2440,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/engineeringChanges": {
       "get": {
@@ -2462,7 +2462,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2470,7 +2470,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2478,7 +2478,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2487,7 +2487,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2504,9 +2504,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/exportCreditLetters": {
       "get": {
@@ -2526,7 +2526,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2534,7 +2534,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2542,7 +2542,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2551,7 +2551,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2568,9 +2568,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/exportCredits": {
       "get": {
@@ -2590,7 +2590,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2598,7 +2598,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2606,7 +2606,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2615,7 +2615,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2632,9 +2632,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/exportMovementSlips": {
       "get": {
@@ -2654,7 +2654,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2662,7 +2662,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2670,7 +2670,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2679,7 +2679,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2696,9 +2696,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/exportNationalizationSlips": {
       "get": {
@@ -2718,7 +2718,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2726,7 +2726,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2734,7 +2734,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2743,7 +2743,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2760,9 +2760,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/exportOperationSlips": {
       "get": {
@@ -2782,7 +2782,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2790,7 +2790,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2798,7 +2798,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2807,7 +2807,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2824,9 +2824,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/exportTypedPurchaseInvoices": {
       "get": {
@@ -2846,7 +2846,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2854,7 +2854,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2862,7 +2862,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2871,7 +2871,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2888,9 +2888,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/exportTypedSalesInvoices": {
       "get": {
@@ -2910,7 +2910,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2918,7 +2918,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2926,7 +2926,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2935,7 +2935,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -2952,9 +2952,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/extendedFieldCategories": {
       "get": {
@@ -2974,7 +2974,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2982,7 +2982,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -2990,7 +2990,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -2999,7 +2999,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3016,9 +3016,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/extendedFieldDefinitions": {
       "get": {
@@ -3038,7 +3038,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3046,7 +3046,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3054,7 +3054,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3063,7 +3063,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3080,9 +3080,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/extendedFields": {
       "get": {
@@ -3102,7 +3102,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3110,7 +3110,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3118,7 +3118,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3127,7 +3127,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3144,9 +3144,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/FAAssignmentSlips": {
       "get": {
@@ -3166,7 +3166,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3174,7 +3174,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3182,7 +3182,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3191,7 +3191,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3208,9 +3208,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/FARegistries": {
       "get": {
@@ -3230,7 +3230,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3238,7 +3238,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3246,7 +3246,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3255,7 +3255,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3272,9 +3272,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/Firmdocs": {
       "get": {
@@ -3294,7 +3294,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3302,7 +3302,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3310,7 +3310,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3319,7 +3319,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3336,9 +3336,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/freeZones": {
       "get": {
@@ -3358,7 +3358,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3366,7 +3366,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3374,7 +3374,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3383,7 +3383,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3400,9 +3400,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/GLAccountMLDescriptions": {
       "get": {
@@ -3422,7 +3422,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3430,7 +3430,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3438,7 +3438,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3447,7 +3447,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3464,9 +3464,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/GLAccounts": {
       "get": {
@@ -3486,7 +3486,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3494,7 +3494,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3502,7 +3502,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3511,7 +3511,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3528,9 +3528,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/GLSlips": {
       "get": {
@@ -3550,7 +3550,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3558,7 +3558,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3566,7 +3566,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3575,7 +3575,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3592,9 +3592,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/groupCodes": {
       "get": {
@@ -3614,7 +3614,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3622,7 +3622,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3630,7 +3630,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3639,7 +3639,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3656,9 +3656,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/importCreditLetters": {
       "get": {
@@ -3678,7 +3678,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3686,7 +3686,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3694,7 +3694,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3703,7 +3703,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3720,9 +3720,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/importDistributionSlips": {
       "get": {
@@ -3742,7 +3742,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3750,7 +3750,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3758,7 +3758,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3767,7 +3767,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3784,9 +3784,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/importOperationSlips": {
       "get": {
@@ -3806,7 +3806,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3814,7 +3814,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3822,7 +3822,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3831,7 +3831,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3848,9 +3848,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/inwardProcessingPermits": {
       "get": {
@@ -3870,7 +3870,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3878,7 +3878,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3886,7 +3886,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3895,7 +3895,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3912,9 +3912,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/itemAlternatives": {
       "get": {
@@ -3934,7 +3934,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3942,7 +3942,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -3950,7 +3950,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -3959,7 +3959,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -3976,9 +3976,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/itemBoms": {
       "get": {
@@ -3998,7 +3998,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4006,7 +4006,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4014,7 +4014,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4023,7 +4023,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4040,9 +4040,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/itemBrands": {
       "get": {
@@ -4062,7 +4062,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4070,7 +4070,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4078,7 +4078,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4087,7 +4087,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4104,9 +4104,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/itemCharacteristics": {
       "get": {
@@ -4126,7 +4126,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4134,7 +4134,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4142,7 +4142,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4151,7 +4151,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4168,9 +4168,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/itemClassAssignments": {
       "get": {
@@ -4190,7 +4190,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4198,7 +4198,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4206,7 +4206,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4215,7 +4215,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4232,9 +4232,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/itemMLDescriptions": {
       "get": {
@@ -4254,7 +4254,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4262,7 +4262,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4270,7 +4270,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4279,7 +4279,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4296,9 +4296,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/items": {
       "get": {
@@ -4318,7 +4318,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4326,7 +4326,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4334,7 +4334,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4343,7 +4343,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4360,9 +4360,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/itemSlips": {
       "get": {
@@ -4382,7 +4382,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4390,7 +4390,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4398,7 +4398,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4407,7 +4407,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4424,9 +4424,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/itemStandardCosts": {
       "get": {
@@ -4446,7 +4446,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4454,7 +4454,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4462,7 +4462,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4471,7 +4471,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4488,9 +4488,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/locationCodes": {
       "get": {
@@ -4510,7 +4510,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4518,7 +4518,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4526,7 +4526,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4535,7 +4535,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4552,9 +4552,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/methods": {
       "get": {
@@ -4573,7 +4573,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4581,7 +4581,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4589,7 +4589,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4598,7 +4598,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4615,9 +4615,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/operations": {
       "get": {
@@ -4637,7 +4637,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4645,7 +4645,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4653,7 +4653,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4662,7 +4662,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4679,9 +4679,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/opportunities": {
       "get": {
@@ -4701,7 +4701,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4709,7 +4709,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4717,7 +4717,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4726,7 +4726,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4743,9 +4743,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/overheadAccounts": {
       "get": {
@@ -4765,7 +4765,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4773,7 +4773,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4781,7 +4781,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4790,7 +4790,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4807,9 +4807,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/paymentDifferenceInvoices": {
       "get": {
@@ -4829,7 +4829,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4837,7 +4837,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4845,7 +4845,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4854,7 +4854,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4871,9 +4871,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/paymentPlanGroupCodes": {
       "get": {
@@ -4893,7 +4893,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4901,7 +4901,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4909,7 +4909,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4918,7 +4918,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4935,9 +4935,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/paymentPlans": {
       "get": {
@@ -4957,7 +4957,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4965,7 +4965,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -4973,7 +4973,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -4982,7 +4982,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -4999,9 +4999,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/postCodes": {
       "get": {
@@ -5021,7 +5021,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5029,7 +5029,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5037,7 +5037,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5046,7 +5046,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5063,9 +5063,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/productionExceptions": {
       "get": {
@@ -5085,7 +5085,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5093,7 +5093,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5101,7 +5101,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5110,7 +5110,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5127,9 +5127,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/productionLines": {
       "get": {
@@ -5149,7 +5149,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5157,7 +5157,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5165,7 +5165,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5174,7 +5174,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5191,9 +5191,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/productionParameters": {
       "get": {
@@ -5213,7 +5213,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5221,7 +5221,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5229,7 +5229,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5238,7 +5238,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5255,9 +5255,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/productionResourceUtilization": {
       "get": {
@@ -5277,7 +5277,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5285,7 +5285,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5293,7 +5293,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5302,7 +5302,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5319,9 +5319,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/productionRoutes": {
       "get": {
@@ -5341,7 +5341,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5349,7 +5349,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5357,7 +5357,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5366,7 +5366,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5383,9 +5383,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/productions": {
       "get": {
@@ -5404,7 +5404,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5412,7 +5412,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5420,7 +5420,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5429,7 +5429,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5446,9 +5446,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/projects": {
       "get": {
@@ -5468,7 +5468,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5476,7 +5476,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5484,7 +5484,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5493,7 +5493,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5510,9 +5510,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseCampaigns": {
       "get": {
@@ -5532,7 +5532,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5540,7 +5540,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5548,7 +5548,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5557,7 +5557,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5574,9 +5574,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseConditionsForSlipLines": {
       "get": {
@@ -5596,7 +5596,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5604,7 +5604,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5612,7 +5612,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5621,7 +5621,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5638,9 +5638,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseConditionsForSlips": {
       "get": {
@@ -5660,7 +5660,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5668,7 +5668,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5676,7 +5676,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5685,7 +5685,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5702,9 +5702,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchasedItemPrices": {
       "get": {
@@ -5724,7 +5724,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5732,7 +5732,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5740,7 +5740,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5749,7 +5749,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5766,9 +5766,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseDiscounts": {
       "get": {
@@ -5788,7 +5788,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5796,7 +5796,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5804,7 +5804,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5813,7 +5813,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5830,9 +5830,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseDispatches": {
       "get": {
@@ -5852,7 +5852,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5860,7 +5860,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5868,7 +5868,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5877,7 +5877,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5894,9 +5894,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchasedServicePrices": {
       "get": {
@@ -5916,7 +5916,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5924,7 +5924,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5932,7 +5932,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -5941,7 +5941,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -5958,9 +5958,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchasedServices": {
       "get": {
@@ -5980,7 +5980,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5988,7 +5988,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -5996,7 +5996,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6005,7 +6005,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6022,9 +6022,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseExpenses": {
       "get": {
@@ -6044,7 +6044,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6052,7 +6052,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6060,7 +6060,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6069,7 +6069,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6086,9 +6086,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseInvoices": {
       "get": {
@@ -6108,7 +6108,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6116,7 +6116,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6124,7 +6124,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6133,7 +6133,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6150,9 +6150,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseOrders": {
       "get": {
@@ -6172,7 +6172,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6180,7 +6180,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6188,7 +6188,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6197,7 +6197,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6214,9 +6214,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchasePromotions": {
       "get": {
@@ -6236,7 +6236,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6244,7 +6244,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6252,7 +6252,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6261,7 +6261,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6278,9 +6278,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseProposalContracts": {
       "get": {
@@ -6300,7 +6300,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6308,7 +6308,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6316,7 +6316,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6325,7 +6325,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6342,9 +6342,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseProposalOffers": {
       "get": {
@@ -6364,7 +6364,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6372,7 +6372,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6380,7 +6380,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6389,7 +6389,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6406,9 +6406,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/purchaseProposalOrders": {
       "get": {
@@ -6428,7 +6428,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6436,7 +6436,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6444,7 +6444,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6453,7 +6453,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6470,9 +6470,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/QCCriteriaAssignments": {
       "get": {
@@ -6492,7 +6492,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6500,7 +6500,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6508,7 +6508,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6517,7 +6517,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6534,9 +6534,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/QCCriteriaSets": {
       "get": {
@@ -6556,7 +6556,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6564,7 +6564,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6572,7 +6572,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6581,7 +6581,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6598,9 +6598,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/queries": {
       "get": {
@@ -6620,7 +6620,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6628,7 +6628,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6636,7 +6636,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6645,7 +6645,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6662,9 +6662,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/quickProductionSlips": {
       "get": {
@@ -6684,7 +6684,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6692,7 +6692,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6700,7 +6700,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6709,7 +6709,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6726,9 +6726,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/repaymentPlans": {
       "get": {
@@ -6748,7 +6748,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6756,7 +6756,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6764,7 +6764,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6773,7 +6773,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6790,9 +6790,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/safeDeposits": {
       "get": {
@@ -6812,7 +6812,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6820,7 +6820,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6828,7 +6828,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6837,7 +6837,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6854,9 +6854,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/safeDepositSlips": {
       "get": {
@@ -6876,7 +6876,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6884,7 +6884,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6892,7 +6892,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6901,7 +6901,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6918,9 +6918,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesActivities": {
       "get": {
@@ -6940,7 +6940,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6948,7 +6948,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -6956,7 +6956,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -6965,7 +6965,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -6982,9 +6982,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesCampaigns": {
       "get": {
@@ -7004,7 +7004,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7012,7 +7012,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7020,7 +7020,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7029,7 +7029,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7046,9 +7046,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesCategories": {
       "get": {
@@ -7068,7 +7068,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7076,7 +7076,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7084,7 +7084,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7093,7 +7093,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7110,9 +7110,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesConditionsForSlipLines": {
       "get": {
@@ -7132,7 +7132,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7140,7 +7140,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7148,7 +7148,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7157,7 +7157,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7174,9 +7174,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesConditionsForSlips": {
       "get": {
@@ -7196,7 +7196,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7204,7 +7204,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7212,7 +7212,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7221,7 +7221,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7238,9 +7238,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesContracts": {
       "get": {
@@ -7260,7 +7260,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7268,7 +7268,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7276,7 +7276,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7285,7 +7285,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7302,9 +7302,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesDiscounts": {
       "get": {
@@ -7324,7 +7324,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7332,7 +7332,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7340,7 +7340,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7349,7 +7349,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7366,9 +7366,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesDispatches": {
       "get": {
@@ -7388,7 +7388,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7396,7 +7396,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7404,7 +7404,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7413,7 +7413,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7430,9 +7430,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesExpenses": {
       "get": {
@@ -7452,7 +7452,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7460,7 +7460,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7468,7 +7468,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7477,7 +7477,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7494,9 +7494,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesInvoices": {
       "get": {
@@ -7516,7 +7516,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7524,7 +7524,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7532,7 +7532,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7541,7 +7541,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7558,9 +7558,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesItemPrices": {
       "get": {
@@ -7580,7 +7580,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7588,7 +7588,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7596,7 +7596,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7605,7 +7605,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7622,9 +7622,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesmanDestinations": {
       "get": {
@@ -7644,7 +7644,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7652,7 +7652,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7660,7 +7660,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7669,7 +7669,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7686,9 +7686,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesmanPositionCodes": {
       "get": {
@@ -7708,7 +7708,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7716,7 +7716,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7724,7 +7724,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7733,7 +7733,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7750,9 +7750,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesmanRoutes": {
       "get": {
@@ -7772,7 +7772,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7780,7 +7780,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7788,7 +7788,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7797,7 +7797,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7814,9 +7814,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesmen": {
       "get": {
@@ -7836,7 +7836,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7844,7 +7844,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7852,7 +7852,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7861,7 +7861,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7878,9 +7878,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesOffers": {
       "get": {
@@ -7900,7 +7900,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7908,7 +7908,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7916,7 +7916,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7925,7 +7925,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -7942,9 +7942,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesOrders": {
       "get": {
@@ -7964,7 +7964,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7972,7 +7972,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -7980,7 +7980,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -7989,7 +7989,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8006,9 +8006,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesPromotions": {
       "get": {
@@ -8028,7 +8028,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8036,7 +8036,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8044,7 +8044,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8053,7 +8053,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8070,9 +8070,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesProvisionDistributionSlips": {
       "get": {
@@ -8092,7 +8092,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8100,7 +8100,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8108,7 +8108,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8117,7 +8117,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8134,9 +8134,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/salesServicePrices": {
       "get": {
@@ -8156,7 +8156,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8164,7 +8164,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8172,7 +8172,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8181,7 +8181,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8198,9 +8198,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/serialAndLotNumbers": {
       "get": {
@@ -8220,7 +8220,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8228,7 +8228,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8236,7 +8236,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8245,7 +8245,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8262,9 +8262,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services": {
       "get": {
@@ -8284,7 +8284,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8292,7 +8292,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8300,7 +8300,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8309,7 +8309,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8326,9 +8326,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/describe": {
       "get": {
@@ -8349,7 +8349,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8357,7 +8357,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8365,7 +8365,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8374,7 +8374,7 @@
             "description": "ResourceApiRepository",
             "schema": {
               "$ref": "#/definitions/ResourceApiRepository",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8391,9 +8391,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/help": {
       "get": {
@@ -8412,7 +8412,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8420,7 +8420,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8428,7 +8428,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8437,7 +8437,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8454,9 +8454,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/shiftAssignments": {
       "get": {
@@ -8476,7 +8476,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8484,7 +8484,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8492,7 +8492,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8501,7 +8501,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8518,9 +8518,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/shifts": {
       "get": {
@@ -8540,7 +8540,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8548,7 +8548,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8556,7 +8556,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8565,7 +8565,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8582,9 +8582,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/soldServices": {
       "get": {
@@ -8604,7 +8604,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8612,7 +8612,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8620,7 +8620,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8629,7 +8629,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8646,9 +8646,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/specialCodes": {
       "get": {
@@ -8668,7 +8668,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8676,7 +8676,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8684,7 +8684,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8693,7 +8693,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8710,9 +8710,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/standardCostPeriods": {
       "get": {
@@ -8732,7 +8732,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8740,7 +8740,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8748,7 +8748,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8757,7 +8757,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8774,9 +8774,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/stopCauses": {
       "get": {
@@ -8796,7 +8796,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8804,7 +8804,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8812,7 +8812,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8821,7 +8821,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8838,9 +8838,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/sys": {
       "get": {
@@ -8860,7 +8860,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8868,7 +8868,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8876,7 +8876,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8885,7 +8885,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8902,9 +8902,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/towns": {
       "get": {
@@ -8924,7 +8924,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8932,7 +8932,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8940,7 +8940,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -8949,7 +8949,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -8966,9 +8966,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/transaction": {
       "get": {
@@ -8988,7 +8988,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -8996,7 +8996,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9004,7 +9004,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9013,7 +9013,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9030,9 +9030,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/unitSets": {
       "get": {
@@ -9052,7 +9052,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9060,7 +9060,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9068,7 +9068,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9077,7 +9077,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9094,9 +9094,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/variants": {
       "get": {
@@ -9116,7 +9116,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9124,7 +9124,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9132,7 +9132,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9141,7 +9141,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9158,9 +9158,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/vehicles": {
       "get": {
@@ -9180,7 +9180,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9188,7 +9188,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9196,7 +9196,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9205,7 +9205,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9222,9 +9222,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/workflowDefinitions": {
       "get": {
@@ -9244,7 +9244,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9252,7 +9252,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9260,7 +9260,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9269,7 +9269,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9286,9 +9286,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/workflowRoles": {
       "get": {
@@ -9308,7 +9308,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9316,7 +9316,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9324,7 +9324,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9333,7 +9333,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9350,9 +9350,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/workstationCosts": {
       "get": {
@@ -9372,7 +9372,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9380,7 +9380,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9388,7 +9388,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9397,7 +9397,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9414,9 +9414,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/workstationGroups": {
       "get": {
@@ -9436,7 +9436,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9444,7 +9444,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9452,7 +9452,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9461,7 +9461,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9478,9 +9478,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/workstations": {
       "get": {
@@ -9500,7 +9500,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9508,7 +9508,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9516,7 +9516,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9525,7 +9525,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9542,9 +9542,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/services/workstationStandardCosts": {
       "get": {
@@ -9564,7 +9564,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9572,7 +9572,7 @@
             "in": "query",
             "description": "",
             "required": false,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           },
           {
@@ -9580,7 +9580,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9589,7 +9589,7 @@
             "description": "JObject",
             "schema": {
               "$ref": "#/definitions/Object",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9606,9 +9606,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/token": {
       "post": {
@@ -9636,18 +9636,18 @@
             "in": "body",
             "required": true,
             "schema": {
-              "vendorExtensions": {},
+              ,
               "type": "string",
               "example": "grant_type=password&username=g_UserName&firmno=g_FirmNr&password=g_UserPass&sessionId=g_SessionID&logodb=g_LogoDB"
             },
-            "vendorExtensions": {}
+            
           },
           {
             "name": "Authorization",
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9656,7 +9656,7 @@
             "description": "RetrieveTokenResult",
             "schema": {
               "$ref": "#/definitions/RetrieveTokenResult",
-              "vendorExtensions": {}
+              
             }
           },
           "400": {
@@ -9673,9 +9673,9 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     },
     "/revoke": {
       "get": {
@@ -9692,7 +9692,7 @@
             "in": "header",
             "description": "",
             "required": true,
-            "vendorExtensions": {},
+            ,
             "type": "string"
           }
         ],
@@ -9703,7 +9703,7 @@
           "200": {
             "description": "void",
             "schema": {
-              "vendorExtensions": {}
+              
             }
           },
           "500": {
@@ -9711,240 +9711,240 @@
           }
         },
         "deprecated": false,
-        "vendorExtensions": {}
+        
       },
-      "vendorExtensions": {}
+      
     }
   },
   "definitions": {
     "Object": {
       "type": "object",
       "properties": {},
-      "vendorExtensions": {}
+      
     },
     "ResourceApiRepository": {
       "type": "object",
       "properties": {
         "apiVersion": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "basePath": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "resourcePath": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "apis": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ResourceApi",
-            "vendorExtensions": {}
+            
           },
-          "vendorExtensions": {}
+          
         }
       },
-      "vendorExtensions": {}
+      
     },
     "ResourceApi": {
       "type": "object",
       "properties": {
         "path": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "description": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "schema": {
           "$ref": "#/definitions/ResourceApiSchema",
-          "vendorExtensions": {}
+          
         },
         "operations": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ResourceApiOperation",
-            "vendorExtensions": {}
+            
           },
-          "vendorExtensions": {}
+          
         }
       },
-      "vendorExtensions": {}
+      
     },
     "ResourceApiSchema": {
       "type": "object",
       "properties": {
         "href": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "schemaDetails": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ResourceApiSchemaDetail",
-            "vendorExtensions": {}
+            
           },
-          "vendorExtensions": {}
+          
         }
       },
-      "vendorExtensions": {}
+      
     },
     "ResourceApiSchemaDetail": {
       "type": "object",
       "properties": {
         "name": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "type": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "href": {
           "type": "string",
-          "vendorExtensions": {}
+          
         }
       },
-      "vendorExtensions": {}
+      
     },
     "ResourceApiOperation": {
       "type": "object",
       "properties": {
         "httpMethod": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "nickname": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "responseClass": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "schema": {
           "$ref": "#/definitions/ResourceApiSchema",
-          "vendorExtensions": {}
+          
         },
         "summary": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "notes": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "parameters": {
           "type": "array",
           "items": {
             "$ref": "#/definitions/ResourceApiOperationParameter",
-            "vendorExtensions": {}
+            
           },
-          "vendorExtensions": {}
+          
         }
       },
-      "vendorExtensions": {}
+      
     },
     "ResourceApiOperationParameter": {
       "type": "object",
       "properties": {
         "paramType": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "name": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "description": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "dataType": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "required": {
           "type": "boolean",
-          "vendorExtensions": {}
+          
         },
         "schema": {
           "$ref": "#/definitions/ResourceApiSchema",
-          "vendorExtensions": {}
+          
         }
       },
-      "vendorExtensions": {}
+      
     },
     "RetrieveTokenResult": {
       "type": "object",
       "properties": {
         "access_token": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "token_type": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "expires_in": {
           "format": "int64",
           "type": "integer",
-          "vendorExtensions": {}
+          
         },
         "refresh_token": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "as:client_id": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "userName": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "firmNo": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "useidm": {
           "type": "boolean",
-          "vendorExtensions": {}
+          
         },
         "sessionId": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "dbName": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "logoDB": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "isLoginEx": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         "isLogoPlugin": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         ".issued": {
           "type": "string",
-          "vendorExtensions": {}
+          
         },
         ".expires": {
           "type": "string",
-          "vendorExtensions": {}
+          
         }
       },
-      "vendorExtensions": {}
+      
     }
   },
-  "vendorExtensions": {}
+  
 }
